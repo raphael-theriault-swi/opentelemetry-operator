@@ -217,6 +217,11 @@ type NodeJS struct {
 	// Resources describes the compute resource requirements.
 	// +optional
 	Resources corev1.ResourceRequirements `json:"resourceRequirements,omitempty"`
+
+	// UseImport overrides the default injected --require flag with an --import flag that supports ESM.
+	// Requires Node.js 18 or later.
+	// +optional
+	UseImport bool `json:"useImport,omitempty"`
 }
 
 // Python defines Python SDK and instrumentation configuration.

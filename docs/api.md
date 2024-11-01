@@ -5667,6 +5667,14 @@ If the former var had been defined, then the other vars would be ignored.<br/>
         </td>
         <td>false</td>
       </tr><tr>
+        <td><b>useImport</b></td>
+        <td>boolean</td>
+        <td>
+          UseImport overrides the default injected --require flag with an --import flag that supports ESM.
+Requires Node.js 18 or later.<br/>
+        </td>
+        <td>false</td>
+      </tr><tr>
         <td><b><a href="#instrumentationspecnodejsvolumeclaimtemplate">volumeClaimTemplate</a></b></td>
         <td>object</td>
         <td>
