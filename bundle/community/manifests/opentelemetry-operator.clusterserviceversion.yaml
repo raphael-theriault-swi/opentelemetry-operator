@@ -99,7 +99,7 @@ metadata:
     categories: Logging & Tracing,Monitoring
     certified: "false"
     containerImage: ghcr.io/open-telemetry/opentelemetry-operator/opentelemetry-operator
-    createdAt: "2024-11-01T17:13:20Z"
+    createdAt: "2024-11-01T18:25:51Z"
     description: Provides the OpenTelemetry components, including the Collector
     operators.operatorframework.io/builder: operator-sdk-v1.29.0
     operators.operatorframework.io/project_layout: go.kubebuilder.io/v3
@@ -478,6 +478,8 @@ spec:
                 - --zap-log-level=info
                 - --zap-time-encoding=rfc3339nano
                 - --enable-nginx-instrumentation=true
+                - '--target-allocator-image=ghcr.io/open-telemetry/opentelemetry-operator/target-allocator:'
+                - '--operator-opamp-bridge-image=ghcr.io/open-telemetry/opentelemetry-operator/operator-opamp-bridge:'
                 env:
                 - name: SERVICE_ACCOUNT_NAME
                   valueFrom:
