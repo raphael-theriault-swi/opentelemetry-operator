@@ -5670,8 +5670,10 @@ If the former var had been defined, then the other vars would be ignored.<br/>
         <td><b>useImport</b></td>
         <td>boolean</td>
         <td>
-          UseImport overrides the default injected --require flag with an --import flag that supports ESM.
-Requires Node.js 18 or later.<br/>
+          UseImport overrides the default injected --require flag with an --import flag.
+When using the provided container image, this enables instrumentation of ESM code.
+This behavior may be different for other images, and the option may even be either required or unsupported.
+Node.js ^18.19.0 || ^20.6.0 || >=22 is required for the flag to be supported.<br/>
         </td>
         <td>false</td>
       </tr><tr>
