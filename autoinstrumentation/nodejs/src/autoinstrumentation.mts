@@ -1,4 +1,10 @@
 import "./autoinstrumentation.js";
+import module from "node:module";
 
-import { register } from "node:module";
-register("@opentelemetry/instrumentation/hooks.mjs");
+if (typeof module.register === "function") {
+    module.register("@opentelemetry/instrumentation/hooks.mjs");
+} else {
+    console.warn(
+      `OpenTelemetry Operator auto-instrumentation could not instrument ESM code: Node.js ${process.version} does not support 'module.register()'`
+    );
+}

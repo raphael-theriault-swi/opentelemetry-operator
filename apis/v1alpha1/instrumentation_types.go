@@ -218,8 +218,10 @@ type NodeJS struct {
 	// +optional
 	Resources corev1.ResourceRequirements `json:"resourceRequirements,omitempty"`
 
-	// UseImport overrides the default injected --require flag with an --import flag that supports ESM.
-	// Requires Node.js 18 or later.
+	// UseImport overrides the default injected --require flag with an --import flag.
+	// When using the provided container image, this enables instrumentation of ESM code.
+	// This behavior may be different for other images, and the option may even be either required or unsupported.
+	// Node.js ^18.19.0 || ^20.6.0 || >=22 is required for the flag to be supported.
 	// +optional
 	UseImport bool `json:"useImport,omitempty"`
 }
