@@ -15,6 +15,6 @@ issues: [3414]
 # Use pipe (|) for multiline entries.
 subtext: |
   The new UseImport option overrides the default injected --require flag with an --import flag.
-	When using the provided container image, this enables instrumentation of ESM code.
-	This behavior may be different for other images, and the option may even be either required or unsupported.
-	Node.js ^18.19.0 || ^20.6.0 || >=22 is required for the flag to be supported.
+  When using the provided container image, this enables instrumentation of ESM code.
+  This behavior may be different for other images, and the option may even be either required or unsupported.
+  Node.js ^18.19.0 || ^20.6.0 || >=22 is required for the flag to be supported.
